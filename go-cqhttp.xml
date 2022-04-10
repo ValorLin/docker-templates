@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>go-cqhttp</Name>
+  <Repository>silicer/go-cqhttp</Repository>
+  <Registry>https://hub.docker.com/r/silicer/go-cqhttp/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/silicer/go-cqhttp/</Support>
+  <Project/>
+  <Overview>Q bot</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5700]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://user-images.githubusercontent.com/25968335/120111974-8abef880-c139-11eb-99cd-fa928348b198.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1649573377</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Q bot</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6700</HostPort>
+        <ContainerPort>6700</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5700</HostPort>
+        <ContainerPort>5700</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/go-cqhttp</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/go-cqhttp</Config>
+  <Config Name="Socket port" Target="6700" Default="6700" Mode="tcp" Description="Socket port" Type="Port" Display="always" Required="true" Mask="false">6700</Config>
+  <Config Name="WebUI" Target="5700" Default="5700" Mode="tcp" Description="WebUI port" Type="Port" Display="always" Required="true" Mask="false">5700</Config>
+</Container>
